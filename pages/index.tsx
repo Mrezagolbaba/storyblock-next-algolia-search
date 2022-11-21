@@ -51,7 +51,6 @@ export default function Page(props: any) {
 }
 
 export async function getServerSideProps({ resolvedUrl }: any) {
-  console.log(resolvedUrl);
   const searchState = pathToSearchState(resolvedUrl);
   await Indexer();
   const resultsState = await findResultsState(Content, {
